@@ -1,236 +1,256 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 /*navegacion*/
 
 nav {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    font-size: 15px;
-    z-index: 101;
-    top: 0;
-    transition: top 0.5s;
-    animation: barraAnimada 1s;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  font-size: 15px;
+  z-index: 101;
+  top: 0;
+  transition: top 0.5s;
+  animation: barraAnimada 1s;
 }
 
 @keyframes barraAnimada {
-    from {
-        top: -100%;
-    }
-    to {
-        top: 0;
-    }
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
 }
 
 .container {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
 }
 
 nav a {
-    padding: 8px 20px;
-    border-radius: 3px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    transition: 0.5s;
+  padding: 8px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: 0.5s;
 }
 
 #box-border {
-    background: #efefef;
-    height: 0.5px;
-    width: 80%;
-    position: absolute;
-    top: 60px;
+  background: #efefef;
+  height: 0.5px;
+  width: 80%;
+  position: absolute;
+  top: 60px;
 }
 
 nav a:hover {
-    color: black;
-    background: #efefef;
+  color: black;
+  background: #efefef;
 }
 
 /*bacground*/
 
 body {
-    height: 100vh;
-    background: linear-gradient(45deg, rgb(32, 3, 3), rgb(25, 0, 62));
-    animation: cambio-fondo 6s ease infinite;
-    background-size: 200% 250%;
-    background-attachment: fixed;
+  height: 100vh;
+  background: linear-gradient(45deg, rgb(32, 3, 3), rgb(25, 0, 62));
+  animation: cambio-fondo 15s ease infinite;
+  background-size: 200% 250%;
+  background-attachment: fixed;
 }
 
 .section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 60px;
 }
 
 @keyframes cambio-fondo {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 /*seccion 1*/
 
 #s1 {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.img-container {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: 125px;
-    left: 150px;
-    animation: imgAnimated 1s;
+.container-form {
+  display: table;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: imgAnimated 2s;
+  display: inline-block;
+  float: left;
 }
 
 @keyframes imgAnimated {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 150px;
-    }
-}
-
-.img-container img {
-    width: 300px;
-    height: 325px;
-    border-radius: 50%;
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .conocer {
-    color: white;
-    top: 140px;
-    left: 600px;
-    position: absolute;
-    width: 400px;
-    text-align: center;
-    height: 100vh;
-
+  text-align: center;
+  display: table;
+  float: left;
+  margin: 20px 200px;
+  margin-right: 0px;
+  color: white;
+  width: 400px;
 }
 
 .maquina-escribir {
-    display: block;
-    font-family: monospace;
-    white-space: nowrap;
-    border-right: 4px solid;
-    font-size: 2em;
-    width: 25.5ch;
-    color: white;
-    margin: 0 auto;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  font-size: 2em;
+  width: 25.5ch;
+  color: white;
+  margin: 0 auto;
 
-    animation: typing 1s steps(12), blink 0.5s infinite step-end alternate;
-    overflow: hidden;
+  animation: typing 1s steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
 }
 
 /*maquina de escribir 1*/
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 }
 
 #subrayado {
-    width: 0%;
-    background: #efefef;
-    height: .5px;
-    top: 10px;
-    position: relative;
-    display: table;
-    margin: 0 auto;
-    animation: subrayado 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+  width: 0%;
+  background: #efefef;
+  height: 0.5px;
+  top: 10px;
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  animation: subrayado 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes subrayado{
-    form{width: 0%;}
-    to{width: 80%;}
+@keyframes subrayado {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
 }
 
 #conversar {
-    margin: auto;
-    white-space: nowrap;
-    width: 17ch;
-    font-size: 18px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    animation: dedos 1s steps(12), blincker 0.5s infinite step-end alternate;
-    overflow: hidden;
-    animation-delay: 1s;
-    display: block;
-    visibility: hidden;
+  margin: auto;
+  white-space: nowrap;
+  width: 17ch;
+  font-size: 18px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  animation: dedos 1s steps(12), blincker 0.5s infinite step-end alternate;
+  overflow: hidden;
+  animation-delay: 1s;
+  display: block;
+  visibility: hidden;
 }
 
 /*maquina de escribir 2*/
 
 @keyframes dedos {
-    from {
-        width: 0;
-        visibility: visible;
-    }
+  from {
+    width: 0;
+    visibility: visible;
+  }
 }
 
 @keyframes blincker {
-    from {
-        border-color: transparent;
-        visibility: visible;
-    }
-    to {
-        visibility: visible;
-    }
+  from {
+    border-color: transparent;
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
 }
 
 #txt-conversar {
-    width: 40ch;
-    padding: 20px;
-    border: 0.5px rgb(132, 5, 5) solid;
-    outline: none;
-    border-radius: 20px;
-    text-align: center;
+  width: 40ch;
+  padding: 20px;
+  border: 0.5px rgb(132, 5, 5) solid;
+  outline: none;
+  border-radius: 20px;
+  text-align: center;
+  animation: input 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes input {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 #submit {
-    display: none;
+  display: none;
 }
 
 #s2 {
