@@ -116,6 +116,7 @@ body {
   display: table;
   color: white;
   width: 400px;
+  animation: all 1s;
 }
 
 .maquina-escribir {
@@ -155,7 +156,7 @@ body {
   display: table;
   margin: 0 auto;
   animation: subrayado 1s;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 
@@ -164,14 +165,14 @@ body {
     width: 0%;
   }
   to {
-    width: 80%;
+    width: 50%;
   }
 }
 
 #conversar {
   margin: auto;
   white-space: nowrap;
-  width: auto;
+  width: 70ch;
   font-size:1.5em;
   margin-top: 60px;
   margin-bottom: 60px;
