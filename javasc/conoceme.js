@@ -22,13 +22,16 @@ txtConversar.addEventListener("keypress", function (event) {  //añadir evento
         let userInput = txtConversar.value;
         switch (infoPersonaArray.length) { //condicional del evento
             case 0:
-                txtConversar.placeholder = "Hola " + userInput + " ¿Que edad tienes?"; //en el caso 1
+                conversar.innerHTML = "Hola " + userInput + " ¿Que edad tienes?"; //en el caso 1
+                txtConversar.placeholder = "Digita tu edad";
                 break;
             case 1:
-                txtConversar.placeholder = "¿Por que razón visitas este sitio?";  //en el caso 2
+                conversar.innerHTML = "¿Por que razón visitas este sitio?";  //en el caso 2
+                txtConversar.placeholder ="Explica tu motivo";
                 break;
             case 2:
-                txtConversar.placeholder = "¿De donde eres?";  //en el caso 3
+                conversar.innerHTML = "¿De donde eres?";  //en el caso 3
+                txtConversar.placeholder ="Tu region";
                 break;
         }
         txtConversar.value = "";
