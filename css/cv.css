@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+#cv {
+  border: 1px solid black;
+  display: table;
+  width: 100%;
+}
+
+#descarga-cv {
+  background: #efefef;
+  border: 0.5px solid black;
+  height: 40px;
+  display: table;
+  margin: 0px auto;
+  text-decoration: none;
+  color: #232323 !important;
+  padding: 10px 10px 10px 13px;
+  border-radius: 8px;
+  transition: 1s;
+  margin-top: 40px;
+}
+
+#descarga-cv:hover {
+  background: white;
+}
+
+#profile {
+  display: block;
+  height: 400px;
+  width: 300px;
+  border: 1px solid black;
+  background: red;
+  float: left;
+}
+
+#informacion-personal {
+  display: table;
+  margin: 0px auto;
+}
+
+#informacion-personal h1{
+    font-size: 2em;
+    line-height: 40px;
+    letter-spacing: 4px;
+    padding-left: 20px;
+}
+
+#linear-h1{
+    height: .5px;
+    background: black;
+    width: 80%;
+    margin-left:20px;
+    margin-bottom: 10px;
+}
+
+#informacion-personal p{
+    padding: 20px;
+    width: 500px;
+}

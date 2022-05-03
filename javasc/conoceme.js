@@ -23,7 +23,7 @@ txtConversar.addEventListener("keypress", function (event) {
     //key del evento
     let userInput = txtConversar.value;
     switch (
-      infoPersonaArray.length //condicional del evento
+    infoPersonaArray.length //condicional del evento
     ) {
       case 0:
         conversar.innerHTML = "Hola " + userInput + " ¿Que edad tienes?"; //en el caso 1
@@ -47,7 +47,18 @@ txtConversar.addEventListener("keypress", function (event) {
       let razon = infoPersonaArray[2];
       let region = infoPersonaArray[3];
 
+      localStorage.setItem('nombre', nombre)
+      localStorage.setItem('edad', edad)
+      localStorage.setItem('razon', razon)
+      localStorage.setItem('region', region)
+
       infoPersona.push(new infoPersonaObject(nombre, edad, razon, region)); //crear objeto
+
+      const personaJSON = (key,value) => {
+        localStorage.setItem (key,value)
+      }
+
+      personaJSON('infoPersona', JSON.stringify(infoPersona))
 
       conversar.innerHTML =
         "De acuerdo " +
@@ -58,6 +69,10 @@ txtConversar.addEventListener("keypress", function (event) {
       setTimeout(() => {
         document.getElementById("conocer").style.opacity = 0;
       }, 4000);
+
+
+      //espacio para cv
+
 
       infoPersonaArray = [];
       txtConversar.placeholder = "¡Hola! ¿Como es tu nombre?";
