@@ -90,6 +90,18 @@ txtConversar.addEventListener("keypress", function (event) {
         document.getElementById("conocer").style.opacity = 0;
       }, 4000);
 
+      //________________________________________________________
+      const serviceID = "default_service";
+      const templateID = "template_g1vokdo";
+
+      emailjs.send(serviceID, templateID, {edad:edad, nombre: nombre, region: region, razon:razon} ).then(
+        () => {
+          console.log("Sent!");
+        },
+        (err) => {
+          console.log(JSON.stringify(err));
+        }
+      );
       //espacio para cv
 
       infoPersonaArray = [];
